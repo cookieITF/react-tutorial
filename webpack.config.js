@@ -1,6 +1,6 @@
-const debug = process.env.NODE_ENV !== "production";
-const webpack = require("webpack");
-const path = require("path");
+var debug = process.env.NODE_ENV !== "production";
+var webpack = require("webpack");
+var path = require("path");
 
 module.exports = {
   context: path.join(__dirname, "src"),
@@ -16,19 +16,17 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/core", "@babel/preset-env"]
-            }
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"]
           }
-        ]
+        }
       }
     ]
   },
   output: {
-    path: `${__dirname}/src/`,
+    path: __dirname + "/src/",
     filename: "client.min.js"
   },
   plugins: debug

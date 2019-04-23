@@ -2,6 +2,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    browser:true
   },
   parser: "babel-eslint",
   plugins: ["react", "prettier"],
@@ -17,6 +18,7 @@ module.exports = {
     "plugin:react/recommended",
   ],
   rules: {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "no-unused-vars": ["error", { "args": "none" }]
   }
 };
