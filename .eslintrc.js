@@ -19,6 +19,7 @@ module.exports = {
   ],
   rules: {
     "prettier/prettier": "error",
-    "no-unused-vars": ["error", { "args": "none" }]
+    "no-unused-vars": ["error", { "args": "none" }],
+    "react/prop-types": [0]
   }
 };
