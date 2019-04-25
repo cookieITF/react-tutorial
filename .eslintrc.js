@@ -18,6 +18,7 @@ module.exports = {
     "plugin:react/recommended",
   ],
   rules: {
+    "no-console": "off",
     "prettier/prettier": "error",
     "no-unused-vars": ["error", { "args": "none" }],
     "react/prop-types": [0]
